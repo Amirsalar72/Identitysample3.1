@@ -25,17 +25,17 @@
                         {
                             <li class="nav-item ml-auto">
                                 <form asp-controller="Account" asp-action="LogOut" method="post">
-                                    <button type="submit" class="btn nav-link text-dark">خروج</button>
+                                    <button type="submit" class="btn nav-link text-dark">LogOut</button>
                                 </form>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item ml-auto">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">ورود</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">ثبت نام</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
                             </li>
                         }
                     </ul>
