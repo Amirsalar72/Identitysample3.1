@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using Identitysample.Repositories;
 using Identitysample.ViewModels.Account;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,13 @@ namespace Identitysample.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly IMessageSender _messageSender;
 
-        public AccountController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager,IMessageSender messageSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _messageSender = messageSender;
         }
 
         [HttpGet]
@@ -36,12 +39,15 @@ namespace Identitysample.Controllers
                 var user = new IdentityUser()
                 {
                     UserName = model.UserName,
-                    Email = model.Email,
-                    EmailConfirmed = true
+                    Email = model.Email
                 };
                 var resualt =  await _userManager.CreateAsync(user,model.Password);
                 if (resualt.Succeeded)
                 {
+                    var emailconfirmationtoken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    var emailmessage = Url.Action("ConfirmEmail", "Account",
+                        new { username = user.UserName, token = emailconfirmationtoken }, Request.Scheme);
+                    await _messageSender.SendEmailAsync(model.Email, "Email Confirm", emailmessage);
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -108,16 +114,26 @@ namespace Identitysample.Controllers
 
         public async Task<IActionResult> ISEmailAvailable(string email)
         {
-            var user = _userManager.FindByEmailAsync(email);
+            var user =await _userManager.FindByEmailAsync(email);
             if (user == null) return Json(true);
             return Json("Email Already Exists");
         }
         public async Task<IActionResult> ISUserNameAvailable(string username)
         {
 
-            var user = _userManager.FindByNameAsync(username);
+            var user =await _userManager.FindByNameAsync(username);
             if (user == null) return Json(true);
             return Json("Username Already Exists");
+        }
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string username, string token)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(token))
+                return NotFound();
+            var user = await _userManager.FindByNameAsync(username); 
+            if (user == null) return NotFound();
+            var resualt = await _userManager.ConfirmEmailAsync(user, token);
+            return Content(resualt.Succeeded ? "Email Confirmed" : "Email Not Confirmed");
         }
     }
 }

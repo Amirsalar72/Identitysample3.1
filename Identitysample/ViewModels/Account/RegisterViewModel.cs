@@ -15,11 +15,14 @@ namespace Identitysample.ViewModels.Account
         [Display(Name = "ایمیل")]
         [EmailAddress]
         [Remote("ISEmailAvailable", "Account")]
+
         public string Email { get; set; }
         [Required]
         [Display(Name = "رمز عبور")]
         [DataType(DataType.Password)]
+
         public string Password { get; set; }
+
         [Required]
         [Display(Name = "تکرار رمز عبور")]
         [Compare(nameof(Password))]
