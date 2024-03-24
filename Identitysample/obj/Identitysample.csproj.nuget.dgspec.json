@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample\\Identitysample.csproj": {}
+    "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample.csproj": {}
   },
   "projects": {
-    "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample\\Identitysample.csproj": {
+    "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample\\Identitysample.csproj",
+        "projectUniqueName": "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample.csproj",
         "projectName": "Identitysample",
-        "projectPath": "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample\\Identitysample.csproj",
+        "projectPath": "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample.csproj",
         "packagesPath": "C:\\Users\\Amirsalar\\.nuget\\packages\\",
-        "outputPath": "E:\\Source Code\\Identitysample\\Identitysample\\Identitysample\\obj\\",
+        "outputPath": "E:\\Source Code\\Identitysample\\Identitysample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

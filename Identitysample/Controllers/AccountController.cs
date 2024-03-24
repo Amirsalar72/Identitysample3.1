@@ -100,10 +100,24 @@ namespace Identitysample.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            _signInManager.SignOutAsync();
+            await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> ISEmailAvailable(string email)
+        {
+            var user = _userManager.FindByEmailAsync(email);
+            if (user == null) return Json(true);
+            return Json("Email Already Exists");
+        }
+        public async Task<IActionResult> ISUserNameAvailable(string username)
+        {
+
+            var user = _userManager.FindByNameAsync(username);
+            if (user == null) return Json(true);
+            return Json("Username Already Exists");
         }
     }
 }

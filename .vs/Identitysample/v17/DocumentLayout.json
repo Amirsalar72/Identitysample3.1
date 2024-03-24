@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Source Code\\Identitysample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|e:\\source code\\identitysample\\identitysample\\viewmodels\\account\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|solutionrelative:identitysample\\viewmodels\\account\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|e:\\source code\\identitysample\\identitysample\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|solutionrelative:identitysample\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|e:\\source code\\identitysample\\identitysample\\viewmodels\\account\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C998964-0EE0-4988-8D33-D98F6EDB1627}|Identitysample\\Identitysample.csproj|solutionrelative:identitysample\\viewmodels\\account\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "E:\\Source Code\\Identitysample\\Identitysample\\ViewModels\\Account\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Identitysample\\ViewModels\\Account\\RegisterViewModel.cs",
+              "ToolTip": "E:\\Source Code\\Identitysample\\Identitysample\\ViewModels\\Account\\RegisterViewModel.cs",
+              "RelativeToolTip": "Identitysample\\ViewModels\\Account\\RegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:58:44.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "E:\\Source Code\\Identitysample\\Identitysample\\ViewModels\\Account\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Identitysample\\ViewModels\\Account\\LoginViewModel.cs",
+              "ToolTip": "E:\\Source Code\\Identitysample\\Identitysample\\ViewModels\\Account\\LoginViewModel.cs",
+              "RelativeToolTip": "Identitysample\\ViewModels\\Account\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:58:19.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\Source Code\\Identitysample\\Identitysample\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Identitysample\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\Source Code\\Identitysample\\Identitysample\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Identitysample\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAqwHIAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:51:55.539Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

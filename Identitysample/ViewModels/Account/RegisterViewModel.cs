@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Security.AccessControl;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Identitysample.ViewModels.Account
 {
@@ -7,10 +8,13 @@ namespace Identitysample.ViewModels.Account
     {
         [Required]
         [Display(Name = "نام کاربری")]
+        [Remote("ISUserNameAvailable","Account")]
         public string UserName { get; set; }
+
         [Required]
         [Display(Name = "ایمیل")]
         [EmailAddress]
+        [Remote("ISEmailAvailable", "Account")]
         public string Email { get; set; }
         [Required]
         [Display(Name = "رمز عبور")]

@@ -12,7 +12,7 @@ namespace Identitysample.ViewModels.Account
         [Required, Display(Name = "رمز عبور")]
         public string Password { get; set; }
 
-        [Required, Display(Name = "مرا به خاطر بسپار")]
+        [Display(Name = "مرا به خاطر بسپار")]
         public bool RememberMe { get; set; }
     }
 }
